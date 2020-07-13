@@ -9,29 +9,29 @@
 <body>
     <h1>Java Script's Lounge</h1>
     <div class="container">
-    <div class="row">
-    <div class="col-6">
-    <div class="input-field">
-        <label for="roast-selection">Roast</label>
-        <select id="roast-selection" name="roast-selection">
-            <option value="">All</option>
-            <option value="light">light</option>
-            <option value="medium">medium</option>
-            <option value="dark">dark</option>
-        </select>
-    </div>
-    <form id="search-form" autocomplete="off">
-        <div class="input-field">
-            <label for="search">Coffee Name</label>
-            <input type="text" id="search" onkeyup="updateCoffees()">
-            <button id="submit">Submit</button>
+        <div class="row border border-dark">
+            <div class="col-6 border border-primary">
+                <div class="input-field">
+                    <label for="roast-selection">Roast</label>
+                    <select id="roast-selection" name="roast-selection">
+                        <option value="">All</option>
+                        <option value="light">light</option>
+                        <option value="medium">medium</option>
+                        <option value="dark">dark</option>
+                    </select>
+                </div>
+            <form id="search-form" autocomplete="off">
+                <div class="input-field">
+                    <label for="search">Coffee Name</label>
+                    <input type="text" id="search" onkeyup="updateCoffees()">
+                    <button id="submit">Submit</button>
+                </div>
+            </form>
+            </div>
+        <div class="col-6 border border-danger">
+            <div id="coffees"></div>
         </div>
-    </form>
-    </div>
-    </div>
-    <div class="col-6">
-    <div id="coffees"></div>
-    </div>
+        </div>
     </div>
     <script src="main.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

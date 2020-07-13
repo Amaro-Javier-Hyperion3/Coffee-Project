@@ -2,12 +2,11 @@
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
-    // html += '<div>' + coffee.id + '</div>';
     html += '<div>' + coffee.name + '</div>';
     html += '<div>' + coffee.roast + '</div>';
     html += '</div>';
+    return html
 
-    return html;
 }
 
 function renderCoffees(coffees) {
@@ -15,24 +14,23 @@ function renderCoffees(coffees) {
     for(var i = 0; i < coffees.length; i++) {
         html += renderCoffee(coffees[i]);
     }
-    // for (var i = 1; i <= coffees.length -1; i++) {
-    //
-    // }
-
     return html;
 }
 
 function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
+    if (e) e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
+    var regex = new RegExp(search.value, 'gi');
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        if(regex.test(coffee.name) && (coffee.roast === selectedRoast || selectedRoast === "")){
             filteredCoffees.push(coffee);
         }
     });
     div.innerHTML = renderCoffees(filteredCoffees);
 }
+
+
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -54,8 +52,27 @@ var coffees = [
 
 var div = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
+// var submitButtonAdd = document.querySelector('#submitAdd');
 var roastSelection = document.querySelector('#roast-selection');
 
 div.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+// submitButtonAdd.addEventListener('click', updateCoffees);
+
+
+//alternate code for adding the All select option
+// if(selectedRoast === "All"){
+//
+//     filteredCoffees.push(coffee);
+// }
+// else if (coffee.roast === selectedRoast) {
+//     filteredCoffees.push(coffee);
+// }
+
+//add coffee function
+// function addCoffee(name,roast){
+//     if(modalName.checkValidity())
+//         coffees.push({id: coffees.length + 1, name: name, roast: roast})
+// }
+// modalName.innerHTML = renderCoffees.push(addCoffee());

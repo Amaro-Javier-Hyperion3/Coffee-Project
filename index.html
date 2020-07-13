@@ -6,32 +6,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Coffee!</h1>
-
-    <form>
-        <label for="roast-selection">roast</label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
+    <h1>Java Script's Lounge</h1>
+    <div class="input-field">
+        <label for="roast-selection">Roast</label>
+        <select id="roast-selection" name="roast-selection">
+            <option value="">All</option>
+            <option value="light">light</option>
+            <option value="medium">medium</option>
+            <option value="dark">dark</option>
         </select>
-        <label for="coffee-name">Coffee Name</label>
-        <input type="search" id="coffee-name" name="coffee-name">
-        <input id="submit" type="submit" />
+    </div>
+    <form id="search-form" autocomplete="off">
+        <div class="input-field">
+            <label for="search">Coffee Name</label>
+            <input type="text" id="search" onkeyup="updateCoffees()">
+            <button id="submit">Submit</button>
+        </div>
     </form>
-
-<!--    <table>-->
-<!--        <thead>-->
-<!--            <tr>-->
-<!--                <th>ID</th>-->
-<!--                <th>NAME</th>-->
-<!--                <th>ROAST</th>-->
-<!--            </tr>-->
-<!--        </thead>-->
-<!--        <tbody id="coffees"></tbody>-->
-<!--    </table>-->
     <div id="coffees"></div>
-
     <script src="main.js"></script>
 </body>
 </html>
+
+<!--    <form id="add-form" autocomplete="off">-->
+<!--        <div class="input-field">-->
+<!--            <h2>Add  a Customer Script!</h2>-->
+<!--            <label for="add">Coffee Name</label>-->
+<!--            <input type="text" id="add">-->
+<!--&lt;!&ndash;            oninput="addCoffee()"&ndash;&gt;-->
+<!--            -->
+<!--            <button id="submitAdd">Submit</button>-->
+<!--        </div>-->
+<!--    </form>-->

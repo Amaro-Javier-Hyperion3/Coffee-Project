@@ -3,7 +3,7 @@
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
     html += '<div>' + coffee.name + '</div>';
-    html += '<div>' + coffee.roast + '</div>';
+    html += '<div>' + " - " + coffee.roast + '</div>';
     html += '</div>';
     return html
 }
@@ -37,24 +37,25 @@ function updateCoffees(e) {
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
-    {id: 1, name: 'Light City', roast: 'light'},
-    {id: 2, name: 'Half City', roast: 'light'},
-    {id: 3, name: 'Cinnamon', roast: 'light'},
-    {id: 4, name: 'City', roast: 'medium'},
-    {id: 5, name: 'American', roast: 'medium'},
-    {id: 6, name: 'Breakfast', roast: 'medium'},
-    {id: 7, name: 'High', roast: 'dark'},
-    {id: 8, name: 'Continental', roast: 'dark'},
-    {id: 9, name: 'New Orleans', roast: 'dark'},
-    {id: 10, name: 'European', roast: 'dark'},
-    {id: 11, name: 'Espresso', roast: 'dark'},
-    {id: 12, name: 'Viennese', roast: 'dark'},
-    {id: 13, name: 'Italian', roast: 'dark'},
-    {id: 14, name: 'French', roast: 'dark'},
+    {id: 1, name: 'JuniorDevBrew', roast: 'light'},
+    {id: 2, name: 'halfDay', roast: 'light'},
+    {id: 3, name: 'spicyJoe', roast: 'light'},
+    {id: 4, name: 'commuter', roast: 'medium'},
+    {id: 5, name: 'averageJoe', roast: 'medium'},
+    {id: 6, name: 'keyboardSlammer', roast: 'medium'},
+    {id: 7, name: 'mtEverest', roast: 'dark'},
+    {id: 8, name: 'johnWick', roast: 'dark'},
+    {id: 9, name: 'arthritisKiller', roast: 'dark'},
+    {id: 10, name: 'blackGoldRush', roast: 'dark'},
+    {id: 11, name: 'seniorDevBrew', roast: 'dark'},
+    {id: 12, name: 'allNighter', roast: 'dark'},
+    {id: 13, name: 'fullSyntheticOil', roast: 'dark'},
+    {id: 14, name: 'rageFest', roast: 'dark'},
 ];
-function changeFontColor(){
-    document.getElementById("coffees").fontcolor( "blue" );
+function color(){
+    document.getElementById('roast').style.color = 'red';
 }
+
 
 var div = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');

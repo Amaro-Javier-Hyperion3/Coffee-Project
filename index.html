@@ -3,28 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Coffee Project</title>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!--Coffee mugs and Header-->
 <div class="container">
     <div class="row">
-        <div class="col-4 m-auto p-auto">
-            <img src="img/coffee.png" height="350" width="350">
-        </div>
-        <div class="col-4 m-auto p-auto">
-            <h1>Java Script's Lounge</h1>
-        </div>
-        <div class="col-4 m-auto p-auto">
-            <img src="img/coffee.png" height="350" width="350">
+        <div class="m-auto p-auto">
+            <h1 class="mt-5"><span class="d-none d-sm-block float-left"><img src="img/coffee.png" height="250" width="250" ></span>Java Script's Lounge<span class="d-none d-lg-block float-right"><img src="img/coffee.png" height="250" width="250"></span></h1>
         </div>
     </div>
 </div>
-
+<!--Search Bar with Results-->
 
     <div class="container">
         <div class="row">
-            <div class="col-12 ">
+            <div class="col-12">
                 <div class="input-field float-right">
                     <label for="roast-selection">Roast</label>
                     <br>
@@ -35,17 +31,21 @@
                         <option value="dark">dark</option>
                     </select>
                 </div>
-            <form id="search-form" autocomplete="off">
+            <form class="search-form" autocomplete="off">
                 <div class="input-field">
                     <label for="search">Coffee Name</label>
                     <br>
                     <input type="text" id="search" onkeyup="updateCoffees()">
-                    <button id="submit">Submit</button>
+                    <br>
+                    <button type="button" id="submit" class=" pulse btn btn-secondary btn-sm">Search</button>
                 </div>
             </form>
             </div>
-        <div class="col-12">
-            <div id="coffees"></div>
+        </div>
+        <div class="row">
+        <div class="col-12 mt-5">
+            <div id="coffees">
+            </div>
         </div>
         </div>
     </div>

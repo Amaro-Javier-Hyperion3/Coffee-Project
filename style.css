@@ -1,0 +1,17 @@
+/*Body Mods*/
+body {
+    background: url("https://mcdn.wallpapersafari.com/medium/38/49/wKf3vF.jpg") no-repeat fixed center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+h1, label, div {
+    color: white;
+}
+
+/*Form Mods*/
+#search {
+    width:75%;
+    height:33%;
+}

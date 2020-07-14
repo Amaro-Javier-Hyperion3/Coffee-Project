@@ -7,12 +7,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Java Script's Lounge</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-4 m-auto p-auto">
+            <img src="img/coffee.png" height="350" width="350">
+        </div>
+        <div class="col-4 m-auto p-auto">
+            <h1>Java Script's Lounge</h1>
+        </div>
+        <div class="col-4 m-auto p-auto">
+            <img src="img/coffee.png" height="350" width="350">
+        </div>
+    </div>
+</div>
+
+
     <div class="container">
-        <div class="row border border-dark">
-            <div class="col-6 border border-primary">
-                <div class="input-field">
+        <div class="row">
+            <div class="col-12 ">
+                <div class="input-field float-right">
                     <label for="roast-selection">Roast</label>
+                    <br>
                     <select id="roast-selection" name="roast-selection">
                         <option value="">All</option>
                         <option value="light">light</option>
@@ -23,12 +38,13 @@
             <form id="search-form" autocomplete="off">
                 <div class="input-field">
                     <label for="search">Coffee Name</label>
+                    <br>
                     <input type="text" id="search" onkeyup="updateCoffees()">
                     <button id="submit">Submit</button>
                 </div>
             </form>
             </div>
-        <div class="col-6 border border-danger">
+        <div class="col-12">
             <div id="coffees"></div>
         </div>
         </div>

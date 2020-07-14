@@ -6,8 +6,11 @@ function renderCoffee(coffee) {
     html += '<div>' + coffee.roast + '</div>';
     html += '</div>';
     return html
-
 }
+// function changeFontColor(){
+//     document.getElementById("coffees").style.color = "red";
+//
+// }
 
 function renderCoffees(coffees) {
     var html = '';
@@ -50,8 +53,7 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 function changeFontColor(){
-    document.getElementById("coffees.roast").style.color = "red";
-    return changeFontColor()
+    document.getElementById("coffees").fontcolor( "blue" );
 }
 
 var div = document.querySelector('#coffees');

@@ -33,7 +33,7 @@ function updateCoffees(e) {
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
-    {id: 1, name: 'JuniorDevBrew', roast: 'light'},
+    {id: 1, name: 'juniorDevBrew', roast: 'light'},
     {id: 2, name: 'halfDay', roast: 'light'},
     {id: 3, name: 'spicyJoe', roast: 'light'},
     {id: 4, name: 'commuter', roast: 'medium'},

@@ -50,13 +50,9 @@ button{
 }
 
 /*SearchBar*/
-
-
-
 #search {
     border:none;
     border-radius: 5px;
-
 }
 #search:hover{
  animation: pulse 2s infinite;
@@ -65,7 +61,6 @@ button{
 #coffees {
     background-color: rgba(231, 228,227, .5);
     color: black;
-
 }
 #coffees.roast {
     color:gray;

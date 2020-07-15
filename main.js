@@ -7,10 +7,6 @@ function renderCoffee(coffee) {
     html += '</div>';
     return html
 }
-// function changeFontColor(){
-//     document.getElementById("coffees").style.color = "red";
-//
-// }
 
 function renderCoffees(coffees) {
     var html = '';
@@ -52,30 +48,14 @@ var coffees = [
     {id: 13, name: 'fullSyntheticOil', roast: 'dark'},
     {id: 14, name: 'rageFest', roast: 'dark'},
 ];
-function color(){
-    document.getElementById('roast').style.color = 'red';
-}
-
 
 var div = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
-// var submitButtonAdd = document.querySelector('#submitAdd');
 var roastSelection = document.querySelector('#roast-selection');
 
 div.innerHTML = renderCoffees(coffees);
-
 submitButton.addEventListener('click', updateCoffees);
-// submitButtonAdd.addEventListener('click', updateCoffees);
 
-
-//alternate code for adding the All select option
-// if(selectedRoast === "All"){
-//
-//     filteredCoffees.push(coffee);
-// }
-// else if (coffee.roast === selectedRoast) {
-//     filteredCoffees.push(coffee);
-// }
 
 //add coffee function
 // function addCoffee(name,roast){
